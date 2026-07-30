@@ -19,7 +19,7 @@ from tai42_tools_stripe._internal.tools.stripe_client import (
 )
 
 
-@tai42_app.tools.tool
+@tai42_app.tools.tool(tags={"stripe", "payments"})
 async def create_stripe_payment_link(
     amount: int,
     currency: str,

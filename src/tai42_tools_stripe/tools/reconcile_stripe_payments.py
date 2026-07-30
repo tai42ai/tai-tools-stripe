@@ -31,7 +31,7 @@ from tai42_tools_stripe._internal.tools.stripe_client import (
 _sleep = asyncio.sleep
 
 
-@tai42_app.tools.tool
+@tai42_app.tools.tool(tags={"stripe", "payments"})
 async def reconcile_stripe_payments(lookback_hours: int = 26) -> dict[str, Any]:
     """Re-answer every paid Checkout Session in the lookback window that the webhook path may have
     lost, and return a per-outcome summary.

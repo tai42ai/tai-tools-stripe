@@ -13,7 +13,7 @@ from tai42_contract.app import tai42_app
 from tai42_tools_stripe._internal.tools.stripe_client import create_checkout_session
 
 
-@tai42_app.tools.tool
+@tai42_app.tools.tool(tags={"stripe", "payments"})
 async def create_stripe_checkout(
     callback_url: str,
     amount: int,

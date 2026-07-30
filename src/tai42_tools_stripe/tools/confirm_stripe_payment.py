@@ -22,7 +22,7 @@ from tai42_tools_stripe._internal.tools.stripe_client import (
 )
 
 
-@tai42_app.tools.tool
+@tai42_app.tools.tool(tags={"stripe", "payments"})
 async def confirm_stripe_payment(event: dict[str, Any]) -> dict[str, Any]:
     """Answer a payment ask from a projected ``checkout.session.completed`` event.
 
